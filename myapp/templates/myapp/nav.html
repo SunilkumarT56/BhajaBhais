@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+  <a class="navbar-brand navbar-logo" href="#">Baja Bhais</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <div class="hori-selector">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}" onclick="handleFacultyClick(this)">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'legacy' %}">
+          <i class="fas fa-landmark"></i> Legacy
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'galary' %}" onclick="handleFacultyClick(this)">
+          <i class="fas fa-users"></i> Gallery
+        </a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'faculty' %}">
+      <i class="fas fa-image" ></i> Team
+      </a>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);">
+          <i class="fas fa-handshake"></i> Sponsors
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
