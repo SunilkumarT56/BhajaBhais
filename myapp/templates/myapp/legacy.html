@@ -9,87 +9,25 @@
     For
   </span>
   <span aria-hidden="true">
-    <span>F</span>
+    <span style="color: white;">F</span>
     <span class=stretch-o></span>
-    <span>r</span>
+    <span style="color: white;">r</span>
   </span>
   <span>Legacy</span>
 </h1>
 </div>
 <center>
 <div class="legacy-container">
+  {% for item in data %}
 <figure class="snip1206">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74"/>
+  <img src="{{item.l_img.url}}" alt="sample74"/>
   <figcaption>
-    <h2>Jason Response</h2>
-    <p>Just makes people try to do everything at once.</p>
+    <h2>{{item.title}}</h2>
+    <p>{{item.disc}}</p>
   </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
+  <a href="{% url 'particular-legacy' item.id %}"></a>
 </figure>
-<figure class="snip1206 hover">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg" alt="sample69"/>
-  <figcaption>
-    <h2>Fleece Marigold</h2>
-    <p>We'd invent machines that do things less efficiently.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample13.jpg" alt="sample13"/>
-  <figcaption>
-    <h2>Ruby Von Rails</h2>
-    <p>To the machines and go play outside.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74"/>
-  <figcaption>
-    <h2>Jason Response</h2>
-    <p>Just makes people try to do everything at once.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206 hover">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg" alt="sample69"/>
-  <figcaption>
-    <h2>Fleece Marigold</h2>
-    <p>We'd invent machines that do things less efficiently.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample13.jpg" alt="sample13"/>
-  <figcaption>
-    <h2>Ruby Von Rails</h2>
-    <p>To the machines and go play outside.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74"/>
-  <figcaption>
-    <h2>Jason Response</h2>
-    <p>Just makes people try to do everything at once.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206 hover">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg" alt="sample69"/>
-  <figcaption>
-    <h2>Fleece Marigold</h2>
-    <p>We'd invent machines that do things less efficiently.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
-<figure class="snip1206">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample13.jpg" alt="sample13"/>
-  <figcaption>
-    <h2>Ruby Von Rails</h2>
-    <p>To the machines and go play outside.</p>
-  </figcaption>
-  <a href="{% url 'particular-legacy' %}"></a>
-</figure>
+{% endfor %}
 </div>
 </center>
 

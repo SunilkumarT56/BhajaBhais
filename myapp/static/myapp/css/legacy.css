@@ -119,6 +119,7 @@ figure.snip1206.hover figcaption p {
   }
 }
 .legacy-container{
+    margin-top: 50px;
     display: flex;
     flex-wrap:wrap;
     flex-basis: calc(100% / 4);
@@ -256,4 +257,3 @@ h1:hover {
 .legacy-button:active {
   transform: scale(0.95);
 }
-

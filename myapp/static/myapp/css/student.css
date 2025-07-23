@@ -1,0 +1,40 @@
+.masked-text {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: 50%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.student-title{
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    height: 60px;
+    margin-top: 50px;
+     background-image: linear-gradient(120deg, #ff7c7c 0%, #000000 100%);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+
+}
+.masking-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+
+}

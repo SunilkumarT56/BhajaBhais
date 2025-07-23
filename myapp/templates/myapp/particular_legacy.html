@@ -2,10 +2,16 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
-<div class="home">
-
-<h1>particular legacy</h1>
-</div>
+<div class="plegacy-container">
+  {% for item in data %}
+<figure class="snip1206">
+  <img src="{{item.l_img.url}}" alt="sample74"/>
+  <figcaption>
+    <h2>{{item.title}}</h2>
+    <p>{{item.disc}}</p>
+  </figcaption>
+</figure>
+{% endfor %}
 
 
 

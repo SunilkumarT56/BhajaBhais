@@ -1,12 +1,40 @@
 {% extends 'myapp/base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
+{% load static %}
 
 <div class="home">
 
-<h1>home page</h1>
+<section class="home-section">
+  <button class="home-button">Pause</button>
+  <article class="home-article">
+    <div class="home-div">
+      <ul class="home-ul">
+        {% for item in data %}
+        <li ><img class="home-img" src="{{ item.h_img.url }}" /></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+</section>
 </div>
+<div class="believe">
+<h2 class="home-h2" style="color: black;">
+  Believe
+  <span class="home-span" style="color: black;">Believe</span>
+  <span class="home-span" style="color: black;">Believe</span>
+  <span class="home-span">in yourself</span>
+</h2>
 
+</div>
+<div class="last">
+<main>
+  <div class="variable" style="background-color: black; color: white;">
+    <span class="work" style="background-color: black; color: white;">BAJA</span>BHAIS
+  </div>
+  <div class="static" style="background-color: black; color: white;"><span style="color: #ff0044;">E</span>MPIRE</div>
+</main>
+</div>
 
 
 

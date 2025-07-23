@@ -1,0 +1,212 @@
+
+.home-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.home-img{
+  display: block;
+  width: 100%;
+}
+
+.home-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-article {
+  display: flex;
+  width: 200%;
+  animation: bannermove 20s linear infinite;
+}
+
+.home-article.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.home-div {
+  width: 100%;
+}
+
+.home-ul {
+  display: flex;
+  background: red;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.home-ul li {
+  width: 100%;
+  background: blue;
+}
+
+.home-ul li:nth-child(2) {
+  background: green;
+}
+
+.home-ul li:nth-child(3) {
+  background: yellow;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media(min-width: 800px){
+    .home-div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.home-img{
+    width: 700px ;
+    height: 500px;
+}
+/* Google Fonts */
+.home-h2{ 
+  font-family:consolas;
+}
+.home-h2 {
+  margin: 0; padding: 0;
+  position:absolute;
+  top: 50%; left: 50%;
+  transform:translate(-50%,-50%);
+  font-size: 6em; color:transparent;
+  text-transform:uppercase;
+}
+.home-h2 .home-span:nth-child(1){
+  position:absolute;
+  top:0; left:0; color: #ffffff;
+  transition:0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow:hidden;
+}
+.home-h2:hover .home-span:nth-child(1){
+  transform:translateY(-18px); 
+}
+.home-h2 .home-span:nth-child(2){
+  position:absolute;
+  top:0; left:0; color: #ffffff;
+  transition:0.5s;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow:hidden;
+}
+.home-h2:hover .home-span:nth-child(2){
+  transform:translateY(18px); 
+}
+.home-h2 .home-span:nth-child(3){
+  position:absolute;
+  top:50%; left: 0;
+  transform:translateY(-50%) scaleY(0);
+  width: 91%; color: #000000;
+  background:#ff0;
+  font-size: 0.25em; font-weight: 500;
+  letter-spacing:0.7em;
+  text-align:center;
+  padding-left: 20px; margin-left: 5px;
+  transition:0.5s;
+}
+.home-h2:hover .home-span:nth-child(3){
+  transform:translateY(-50%) scaleY(1);
+}
+
+.home-h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+  @font-face {
+    font-family: 'Inconsolata';
+    src: url('https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf');
+    font-weight: 275 900;
+    font-stretch: 50% 200%;
+  }
+
+  main {
+    white-space: nowrap;
+    width: 80vw;
+    margin: auto;
+  }
+
+  .static {
+    font-size: 30px;
+    font-variation-settings: "wght"900, "wdth"200;
+  }
+
+  .variable {
+    display: flex;
+    font-variation-settings: "wght"275, "wdth"50;
+    text-align: center;
+    animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+  }
+
+  .work {
+    animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+  }
+
+
+  @keyframes swapthings {
+    0% {
+      font-variation-settings: "wght"275, "wdth"50;
+    }
+
+    50% {
+      font-variation-settings: "wght"900, "wdth"200;
+    }
+
+    100% {
+      font-variation-settings: "wght"275, "wdth"50;
+    }
+  }
+
+  @keyframes swapthings2 {
+    0% {
+      font-variation-settings: "wght"900, "wdth"200;
+    }
+
+    50% {
+      font-variation-settings: "wght"275, "wdth"50;
+    }
+
+    100% {
+      font-variation-settings: "wght"900, "wdth"200;
+    }
+  }
+.last{
+    margin: 50px;
+    padding: 0;
+    width: 150px;
+    height: 80px;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: 'Inconsolata';
+
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+/* Global */

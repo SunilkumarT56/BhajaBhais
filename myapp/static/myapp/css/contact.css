@@ -1,0 +1,404 @@
+
+.text-container {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.text-container:hover {
+  transform: translateY(-5px);
+}
+
+.contact-name {
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  height: 4.5rem;
+}
+
+.contact-name span.prefix {
+  font-size: 30px;
+  margin-left: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-name span.prefix:hover {
+  color: #7c5ce0;
+}
+
+.message {
+  background: linear-gradient(45deg, #a8d8ea, #aa96da);
+  color: #000;
+  display: block;
+  font-weight: 700;
+  overflow: hidden;
+  position: absolute;
+  padding: 0.2rem 1rem;
+  top: 0.2rem;
+  left: 270px;
+  border-radius: 4px;
+  animation: openclose 8s ease-in-out infinite;
+  height: 4.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.word1, .word2, .word3, .word4 {
+  font-family: tahoma;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  height: 4.5rem;
+}
+
+.message .word1 { animation: word-animation 8s infinite; }
+.message .word2 { animation: word-animation 8s infinite 2s; }
+.message .word3 { animation: word-animation 8s infinite 4s; }
+.message .word4 { animation: word-animation 8s infinite 6s; }
+
+@keyframes word-animation {
+  0%, 5% { opacity: 0; }
+  10%, 22% { opacity: 1; }
+  27%, 100% { opacity: 0; }
+}
+
+@keyframes openclose {
+  0% { top: 0.2rem; width: 0; }
+  5% { width: 0; }
+  10% { width: 285px; }
+  20% { top: 0.2rem; width: 285px; }
+  25% { top: 0.2rem; width: 0; }
+  30% { top: 0.2rem; width: 0; }
+  35% { top: 0.2rem; width: 285px; }
+  45% { top: 0.2rem; width: 285px; }
+  50% { top: 0.2rem; width: 0; }
+  55% { top: 0.2rem; width: 0; }
+  60% { top: 0.2rem; width: 285px; }
+  70% { top: 0.2rem; width: 285px; }
+  75% { top: 0.2rem; width: 0; }
+  80% { top: 0.2rem; width: 285px; }
+  90% { top: 0.2rem; width: 285px; }
+  95% { top: 0.2rem; width: 0; }
+  100% { top: 0.2rem; width: 0; }
+}
+
+@media (max-width: 768px) {
+  .contact-name {
+    font-size: 2rem;
+    width: 300px;
+  }
+  
+  .contact-name span.prefix {
+    font-size: 1.4rem;
+    margin-left: 20px;
+  }
+  
+  .message {
+    left: 120px;
+  }
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+
+#contact {
+  margin-top: 60px;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  max-width: 500px;
+  background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(15, 15, 15, 0.5);
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-size: 2.5rem;
+  color: #090909;
+  margin-bottom: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.contact-box h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(45deg , rgb(0, 0, 0),rgb(0, 0, 0));
+  margin: 1rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+.contact-lead {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #cacaca;
+  margin-bottom: 0.5rem;
+}
+
+.contact-box p {
+  color: #171515;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #001524;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #b8c5cf;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-item {
+  position: relative;
+}
+
+.form-item input,
+.form-item textarea {
+  width: 100%;
+  padding: 10px 6px;
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+}
+
+.form-item label {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: rgb(17, 16, 16);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-item:has(textarea) label {
+  top: 75%;
+}
+
+.form-item input:focus + label,
+.form-item textarea:focus + label,
+.form-item input:not(:placeholder-shown) + label,
+.form-item textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.form-button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 0;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-button:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.form-button:active {
+  background-color: #161b1c;
+}
+.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: start;
+  height: 20px;
+  vertical-align: -2px;
+}
+
+.dropping-texts > div {
+  font-size:0px;
+  opacity:0;
+  margin-left:-30px;
+  position:absolute;
+  font-weight:50;   
+  box-shadow: 0px 60px 25px -20px rgba(255, 255, 255, 0.5);
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  20% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size:0px;
+    opacity:0.5;
+    margin-left:20px;
+    margin-top:100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-20px;
+    margin-top:0px;
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-20px;
+    margin-top:0px;
+    transform: rotate(-2deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  30% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size:50px;
+    opacity:0;
+    margin-left:-200px;
+    margin-top:-100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-20px;
+    margin-top:0px;
+    transform: rotate(2deg);
+  }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+.contact-info {
+  margin:0px;
+  text-align:center;
+  padding-top:30px;
+  color:white;
+  font-family:'Roboto';
+  font-size:36px;
+  font-weight:100;
+  overflow:hidden;
+  animation:bg 5s linear infinite;
+   margin-top: 0px;
+   height: 250px;
+}
+.accordion-item{
+    width:700px;
+}
+.info{
+    height: 300px;
+}
+@media (max-width: 768px) {
+  .accordion-item {
+    width: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .accordion-item {
+    width: 350px;
+  }
+}
+.span-contact{
+    /** Text Gradient Example */ 
+ color: white;
+margin-right: 20px;
+font-weight: 0;
+font-family:Arial, Helvetica, sans-serif;
+}
