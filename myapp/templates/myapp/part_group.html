@@ -1,0 +1,69 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% load static %}
+
+<style>
+  @keyframes rollName {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    20% { opacity: 1; }
+    30% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 0; }
+  }
+
+  .roll-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    animation: rollName 5s linear infinite;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+</style>
+
+<div class="legacy_more_container1">
+    <div class="lecacy_more1">
+      <figure class="snip1200">
+        <img src="{{ group.g_img.url }}" alt="" />
+        <figcaption>
+          <p>{{ group.description1 }}<br>{{ group.description2 }}</p>
+          <div class="heading">
+            <h2>{{ group.p_title }}<span style="margin-left: 5px;">{{ group.s_title }}</span></h2>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+<div class="contact-info1" style=" padding: 10px; border-radius: 10px; width: 300px;">
+  <span class="span-contact1" style="color: #ff6a00; font-weight: 600; margin-top: 0px ;margin-bottom: 20px;">Team members</span>
+
+  <!-- Rotating name box -->
+  <div id="name-rotator" style="color: #dddddd; text-align: center; font-weight: bold; font-size: 20px; background-color:  rgba(211, 211, 211, 0.095); padding: 8px 12px; border-radius: 8px; display: inline-block;"></div>
+
+  <!-- Hidden all names for JS -->
+  <ul id="name-list" style="display: none;">
+    {% for member in members %}
+      <li>{{ member.name }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+  const nameList = document.querySelectorAll('#name-list li');
+  const nameRotator = document.getElementById('name-rotator');
+  let index = 0;
+
+  function showNextName() {
+    if (nameList.length > 0) {
+      nameRotator.textContent = nameList[index].textContent;
+      index = (index + 1) % nameList.length;
+    }
+  }
+
+  showNextName(); // initial
+  setInterval(showNextName, 1000); // every 1 sec
+</script>
+{% endblock %}

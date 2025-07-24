@@ -13,4 +13,5 @@ urlpatterns = [
     path('sponcers',views.sponcers, name='sponcers'),
     path('sponcers', views.js_download_page, name='js_download'),
     path('contact' , views.contact , name='contact'),
+    path('part_group/<group_id>',views.part_group, name='part-group'),
 ]

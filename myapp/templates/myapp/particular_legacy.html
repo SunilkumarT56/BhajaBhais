@@ -3,14 +3,26 @@
 {% block content %}
 
 <div class="plegacy-container">
+  <div class="img">
   {% for item in data %}
 <figure class="snip1206">
   <img src="{{item.l_img.url}}" alt="sample74"/>
   <figcaption>
-    <h2>{{item.title}}</h2>
-    <p>{{item.disc}}</p>
+    <h2>{{item.title1}}</h2>
+    <p>{{item.disc1}}</p>
+     <p>{{item.disc3}}</p>
   </figcaption>
 </figure>
+</div>
+<div class="disc">
+  <ul class="plist">
+  <li><p class="line-1 anim-typewriter">{{item.disc2}}</p></li>
+  <div>
+  
+  </div>
+  </div>
+  </div>
+
 {% endfor %}
 
 

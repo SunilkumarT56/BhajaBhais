@@ -1,0 +1,215 @@
+.dropping-texts1{
+  display: inline-block;
+  width: 180px;
+  text-align: start;
+  height: 20px;
+  vertical-align: -2px;
+}
+
+.dropping-texts1 > div {
+  font-size:0px;
+  opacity:0;
+  margin-left:-30px;
+  position:absolute;
+  font-weight:50;   
+  box-shadow: 0px 60px 25px -20px rgba(255, 255, 255, 0.5);
+}
+
+.dropping-texts1 > div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+.dropping-texts1 > div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+.dropping-texts1 > div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+.dropping-texts1 > div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  20% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size:0px;
+    opacity:0.5;
+    margin-left:20px;
+    margin-top:100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-20px;
+    margin-top:0px;
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-20px;
+    margin-top:0px;
+    transform: rotate(-2deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  30% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size:50px;
+    opacity:0;
+    margin-left:-200px;
+    margin-top:-100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-20px;
+    margin-top:0px;
+    transform: rotate(2deg);
+  }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+.contact-info1 {
+  margin:0px;
+  text-align:center;
+  padding-top:30px;
+  color:white;
+  font-family:'Roboto';
+  font-size:36px;
+  font-weight:100;
+  overflow:hidden;
+  animation:bg 5s linear infinite;
+   margin-top: 150px;
+   height: 250px;
+   display: block;
+}
+.legacy_more_container1{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+}
+.legacy_more_container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.lecacy_more1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.snip1200 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  background: #222;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+.contact-info1 {
+  margin-top: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.span-contact1 {
+  font-size: 20px;
+  display: block;
+}
+
+.dropping-texts1 div {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* 🔻 Responsive Design 🔻 */
+@media screen and (max-width: 768px) {
+  .lecacy_more1 {
+    flex-direction: column;
+  }
+
+  .snip1200 {
+    flex-direction: column;
+  }
+
+  .snip1200 img {
+    width: 100%;
+  }
+
+  .snip1200 .heading h2 {
+    font-size: 18px;
+  }
+
+  .snip1200 figcaption p {
+    font-size: 14px;
+  }
+
+  .span-contact1,
+  .dropping-texts1 div {
+    font-size: 16px;
+  }
+}
+.contact-info1{
+  margin-top: 50px;
+}
+.span-contact1{
+  color: #ff0044;
+  margin-top: 150px;
+}

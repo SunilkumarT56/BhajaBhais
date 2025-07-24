@@ -18,21 +18,21 @@
 </div>
 
 <div class="legacy_more_container">
+  {% for item in data %}
     <div class="lecacy_more">
 <figure class="snip1200">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
+  <img src="{{item.g_img.url}}" alt="" />
   <figcaption>
-    <p>I say, if your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
+    <p>{{item.description1}}</p>
     <div class="heading">
-      <h2>My<span> Hobby</span></h2>
+      <h2>{{item.p_title}}<span style="margin-left: 5px;">{{item.s_title}}</span></h2>
     </div>
   </figcaption>
-  <a href="#"></a>
 </figure>
 <div class="legacy-viewmore">
-<a href="{% url 'legacy-more' %}">
+<a href="{% url 'part-group' item.id %}">
 <button class="legacy-button">
-  <span>Continue</span>
+  <span style="font-weight: 500;">View More</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -50,134 +50,9 @@
 </a>
 </div>
 </div>
-<div class="lecacy_more">
-<figure class="snip1200">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
-  <figcaption>
-    <p>I say, if your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
-    <div class="heading">
-      <h2>My<span> Hobby</span></h2>
-    </div>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<div class="legacy-viewmore">
-<a href="{% url 'legacy-more' %}">
-<button class="legacy-button">
-  <span>Continue</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 74 74"
-    height="34"
-    width="34"
-  >
-    <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
-    <path
-      fill="black"
-      d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-    ></path>
-  </svg>
-</button>
 </a>
-</div>
-</div>
-<div class="lecacy_more">
-<figure class="snip1200">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
-  <figcaption>
-    <p>I say, if your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
-    <div class="heading">
-      <h2>My<span> Hobby</span></h2>
-    </div>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<div class="legacy-viewmore">
-<a href="{% url 'legacy-more' %}">
-<button class="legacy-button">
-  <span>Continue</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 74 74"
-    height="34"
-    width="34"
-  >
-    <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
-    <path
-      fill="black"
-      d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-    ></path>
-  </svg>
-</button>
-</a>
-</div>
-</div>
-<div class="lecacy_more">
-<figure class="snip1200">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
-  <figcaption>
-    <p>I say, if your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
-    <div class="heading">
-      <h2>My<span> Hobby</span></h2>
-    </div>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<div class="legacy-viewmore">
-<a href="{% url 'legacy-more' %}">
-<button class="legacy-button">
-  <span>Continue</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 74 74"
-    height="34"
-    width="34"
-  >
-    <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
-    <path
-      fill="black"
-      d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-    ></path>
-  </svg>
-</button>
-</a>
-</div>
-</div>
-<div class="lecacy_more">
-<figure class="snip1200">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg" alt="sq-sample27" />
-  <figcaption>
-    <p>I say, if your knees aren't green by the end of the day, you ought to seriously re-examine your life.</p>
-    <div class="heading">
-      <h2>My<span> Hobby</span></h2>
-    </div>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<div class="legacy-viewmore">
-<a href="{% url 'legacy-more' %}">
-<button class="legacy-button">
-  <span>Continue</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 74 74"
-    height="34"
-    width="34"
-  >
-    <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>
-    <path
-      fill="black"
-      d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-    ></path>
-  </svg>
-</button>
-</a>
-</div>
-</div>
+{% endfor %}
+
 </div>
 
 

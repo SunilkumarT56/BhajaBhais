@@ -19,7 +19,8 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    /><link rel="stylesheet" href="{% static 'myapp/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'myapp/css/particular_legacy.css' %}" />
      <link rel="stylesheet" href="{% static 'myapp/css/student.css' %}" />
     <link rel="stylesheet" href="{% static 'myapp/css/contact.css' %}" />
     <link rel="stylesheet" href="{% static 'myapp/css/nav.css' %}" />
@@ -30,6 +31,7 @@
      <link rel="stylesheet" href="{% static 'myapp/css/home.css' %}" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+        <link rel="stylesheet" href="{% static 'myapp/css/part_group.css' %}" />
 
     <style>
       body {
@@ -43,6 +45,8 @@
     <br/><br/><br/>
      {% block content %} 
      {% endblock %}
+      <br/>
+      {% include 'myapp/footer.html'%}
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -67,5 +71,6 @@
      <script src="{% static 'myapp/javascript/sponcers.js' %}"></script>
      <script src="{% static 'myapp/javascript/contact.js' %}"></script>
       <script src="{% static 'myapp/javascript/student.js' %}"></script>
+      <script src="{% static 'myapp/javascript/particular_legacy.js' %}"></script>
   </body>
 </html>
