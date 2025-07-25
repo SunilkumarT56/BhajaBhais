@@ -1,9 +1,9 @@
-    
+{% load static %}
     
     <header class="header">
         <nav class="navbar">
             <div class="nav-brand">
-                <a href="#" class="logo">Baja Bhais</a>
+                <a href="#" class="logo"><img src="" alt="" class="logo-img"></a>
             </div>
             
             <div class="nav-toggle">
@@ -40,10 +40,10 @@
                         </a>
                         <ul class="dropdown">
                             <li><a href="{% url 'galary' %}">All</a></li>
-                            <li><a href="#">2009-2010</a></li>
-                            <li><a href="#">2011-2012</a></li>
-                            <li><a href="#">2013-2014</a></li>
-                             <li><a href="#">2015-2016</a></li>
+                            <li><a href="{% url 'first' %}">2009-2010</a></li>
+                            <li><a href="{% url 'second' %}">2011-2012</a></li>
+                            <li><a href="{% url 'third' %}">2013-2014</a></li>
+                            <li><a href="{% url 'fourth' %}">2015-2016</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

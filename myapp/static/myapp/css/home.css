@@ -110,7 +110,7 @@
   width: 91%; color: #000000;
   background:#ff0;
   font-size: 0.25em; font-weight: 500;
-  letter-spacing:0.7em;
+  letter-spacing:0.2em;
   text-align:center;
   padding-left: 20px; margin-left: 5px;
   transition:0.5s;
@@ -202,7 +202,12 @@
 
 
 
-
+button{
+  background-color: #ff0044 !important;
+}
+body{
+  color: black !important;
+}
   
 
 

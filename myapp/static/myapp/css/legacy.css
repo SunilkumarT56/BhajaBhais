@@ -233,7 +233,7 @@ h1:hover {
   transition: all 0.2s;
   padding: 10px 20px;
   border-radius: 100px;
-  background: #2e81bd;
+  background: #ff0044;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -241,7 +241,7 @@ h1:hover {
 }
 
 .legacy-button:hover {
-  background: #3694d7;
+  background: #cd5374;
 }
 
 .legacy-button> svg {

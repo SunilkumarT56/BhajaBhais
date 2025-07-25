@@ -14,26 +14,19 @@
       </div>
     </h1>
   </div>
-<div class="album-container">
-<div class="album">
-  <div class="responsive-container-block bg">
-    <div class="responsive-container-block img-cont">
-      <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.4.svg">
-      <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.5.svg">
-      <img class="img img-last" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.6.svg">
-    </div>
-    <div class="responsive-container-block img-cont">
-      <img class="img img-big" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.11.svg">
-      <img class="img img-big img-last" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.10.svg">
-    </div>
-    <div class="responsive-container-block img-cont">
-      <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.7.svg">
-      <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.8.svg">
-      <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.9.svg">
-    </div>
-  </div>
+<center>
+<div class="legacy-container" style="margin-top: 50px;">
+  {% for item in data %}
+<figure class="snip1206" style="margin-top: 20px;">
+  <img src="{{item.f_img.url}}" alt=""/>
+  <figcaption>
+    <h2 style="font-size: 18px;">{{item.f_name}}</h2>
+    <p>{{item.f_title}}</p>
+  </figcaption>
+</figure>
+{% endfor %}
 </div>
-</div>
+</center>
 <div class="legacy-viewmore">
 <a href="{% url 'students' %}">
 <button class="legacy-button">

@@ -2,6 +2,86 @@
 {% block title %}Contact{% endblock %}
 {% block content %}
 
+<style>
+  .c-i {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.accordion-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    margin:0 auto;
+}
+.accordion {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.accordion:last-child{
+    margin-bottom: 0;
+}
+.accordion-label {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px;
+    background: #ff0044;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 18px;
+}
+.accordion-label:hover {
+    background: #ff0044;
+}
+.accordion-label::after {
+    content: "\276F";
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.accordion-content {
+    max-height: 0;
+    padding: 0 16px;
+    color: #ff0044;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.accordion-content p{
+    margin: 0;
+    color: #000000;
+    font-size: 18px;
+}
+.c-i:checked + .accordion-label {
+    background: #ff0044;
+}
+.c-i:checked + .accordion-label::after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.c-i:checked ~ .accordion-content {
+    max-height: 100vh;
+    padding: 16px;
+}
+.info{
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+@media screen and (max-width: 600px) {
+  .info {
+     width: 320px;
+  }
+}
+</style>
+
 <div class="contact-container">
 
   <div class="text-container">
@@ -51,41 +131,36 @@
   <div style=" color:#fff">Transformation</div>
 </div>
 </div>
-
 <div class="info">
-   <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Phone
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"></div>
+  {% for item in data %}
+  <div class="accordion-wrapper">
+  <div class="accordion">
+    <input class="c-i" type="radio" name="radio-a" id="check1" checked>
+    <label class="accordion-label" for="check1">Phone</label>
+    <div class="accordion-content">
+      <p>{{item.phone_number}}</p>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-    Email
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"></div>
+  <div class="accordion">
+    <input class="c-i" type="radio" name="radio-a" id="check2">
+    <label class="accordion-label" for="check2">Email</label>
+    <div class="accordion-content">
+      <p>{{item.email}}</p>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Address
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"></div>
+  <div class="accordion">
+    <input class="c-i" type="radio" name="radio-a" id="check3">
+    <label class="accordion-label" for="check3">Address</label>
+    <div class="accordion-content">
+      <p>{{item.address}}</p>
     </div>
   </div>
 </div>
+{% endfor %}
+  
+
 </div>
+
 
 </div>
 

@@ -2,42 +2,45 @@
 {% block title %}Sponsors{% endblock %}
 {% block content %}
 
-<div class="sponcers-name">
-<div class="wrapper">
-  <span style="color: #ff0044;">S</span>
-  <span>P</span>
-  <span>O</span>
-  <span>N</span>
-  <span>S</span>
-  <span>O</span>
-  <span>R</span>
-  <span>S</span>
+<div class="sponsors-title" style="margin-top: 50px;">
+  <h1 class="s-h1" style="text-align: center;">Sponsors</h1>
 </div>
-</div>
+
+
 <div class="sponcers-container">
+  
     <div class="gold-sponcers">
         <h1 class="sponcers-h1"><span>Our</span><span style="color: gold; font-weight:bolder;">Gold</span><span>Partners</span></h1>
-        <img src="myapp/images/..">
+        <div class="g_img">
+        {% for item in data %}
+        <div>
+        <img src="{{item.gold_img.url}}" style="width: 150px; margin-top: 30px;">
+        </div>
+        {% endfor %}
+        </div>
+        
     </div>
     <div class="other-sponcers">
         <h1 class="sponcers-h1"><span>Our</span><span style="color: rgb(175, 42, 202); font-weight:bolder;">Other</span><span>Partners</span></h1>
-         <img src="myapp/images/..">
-          <img src="myapp/images/..">
-           <img src="myapp/images/..">
+          <div class="o_img">
+        {% for item in data %}
+        <div>
+        <img src="{{item.gold_img.url}}" style="width: 150px; margin-top: 30px;">
+        </div>
+        {% endfor %}
+        </div>
     </div>
     <div class="prev-sponcers">
         <h1 class="sponcers-h1"><span>Our</span><span style="color: rgb(51, 105, 214); font-weight:bolder;">Previous</span><span>Partners</span></h1>
-         <img src="myapp/images/..">
-          <img src="myapp/images/..">
-          <img src="myapp/images/..">
-           <img src="myapp/images/..">
-            <img src="myapp/images/..">
-             <img src="myapp/images/..">
-              <img src="myapp/images/..">
-               <img src="myapp/images/..">
-                <img src="myapp/images/..">
+          <div class="p_img">
+        {% for item in data %}
+        <div>
+        <img src="{{item.gold_img.url}}" style="width: 150px; margin-top: 30px;">
+        </div>
+        {% endfor %}
+        </div>
     </div>
-    <div class="sponcers-download">
+    <div class="sponcers-download" >
        <p>DOWNLOAD OUR SPONCERS BROCHURE</p>
        <div class="legacy-viewmore">
 <button class="legacy-button download-btn" onclick="downloadFile()">
