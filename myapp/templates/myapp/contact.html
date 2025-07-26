@@ -123,7 +123,7 @@
   </div>
 </section>
 <div class="contact-info">
-    <span class="span-contact" style="color: #fff;">Contact Us for </span>
+    <span class="span-contact" style="color: red;">Contact Us for </span>
 <div class="dropping-texts">
   <div style=" color: #ffffff">Innovation</div>
   <div style=" color:#fff">Collaboration</div>
@@ -131,33 +131,36 @@
   <div style=" color:#fff">Transformation</div>
 </div>
 </div>
-<div class="info">
-  {% for item in data %}
-  <div class="accordion-wrapper">
-  <div class="accordion">
-    <input class="c-i" type="radio" name="radio-a" id="check1" checked>
-    <label class="accordion-label" for="check1">Phone</label>
-    <div class="accordion-content">
-      <p>{{item.phone_number}}</p>
-    </div>
-  </div>
-  <div class="accordion">
-    <input class="c-i" type="radio" name="radio-a" id="check2">
-    <label class="accordion-label" for="check2">Email</label>
-    <div class="accordion-content">
-      <p>{{item.email}}</p>
-    </div>
-  </div>
-  <div class="accordion">
-    <input class="c-i" type="radio" name="radio-a" id="check3">
-    <label class="accordion-label" for="check3">Address</label>
-    <div class="accordion-content">
-      <p>{{item.address}}</p>
+
+<div class=" min-h-screen p-6" style="background-color: rgb(0, 0, 0);">
+  <div class="max-w-3xl mx-auto  p-8 rounded-2xl shadow-lg shadow-red-700">
+    <h2 class="text-2xl font-bold mb-6 text-center" style="color: red;">Contact Information</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block mb-2 text-sm font-medium text-red-200">Phone</label>
+        <input type="tel" id="phone"
+               class="w-full p-3 border border-red-400 rounded-lg text-white placeholder-red-300 focus:outline-none focus:ring-2 focus:ring-red-500" style="background-color: red;">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-red-200">Email</label>
+        <input type="email" id="email"
+               class="w-full p-3 border border-red-400 rounded-lg text-white placeholder-red-300 focus:outline-none focus:ring-2 focus:ring-red-500" style="background-color: red;">
+      </div>
+
+      <!-- Address (full width) -->
+      <div class="md:col-span-2">
+        <label for="address" class="block mb-2 text-sm font-medium text-red-200">Address</label>
+        <textarea id="address" rows="3"
+                  class="w-full p-3 border border-red-400 rounded-lg text-white placeholder-red-300 focus:outline-none focus:ring-2 focus:ring-red-500" style="background-color: red;"></textarea>
+      </div>
     </div>
   </div>
 </div>
-{% endfor %}
-  
+
 
 </div>
 

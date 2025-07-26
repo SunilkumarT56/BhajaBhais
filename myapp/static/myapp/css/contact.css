@@ -38,7 +38,7 @@
 }
 
 .message {
-  background: linear-gradient(45deg, #a8d8ea, #aa96da);
+  background: linear-gradient(45deg, rgb(237,221,102),rgb(255,4,4));
   color: #000;
   display: block;
   font-weight: 700;
@@ -155,7 +155,7 @@ background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, F
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(45deg , rgb(0, 0, 0),rgb(0, 0, 0));
+  background: linear-gradient(45deg , rgb(255, 0, 0),rgb(255, 0, 0));
   margin: 1rem auto 1.5rem;
   border-radius: 2px;
 }
@@ -372,80 +372,11 @@ background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, F
   padding-top:30px;
   color:white;
   font-family:'Roboto';
-  font-size:36px;
+  font-size:32px;
   font-weight:100;
   overflow:hidden;
   animation:bg 5s linear infinite;
    margin-top: 0px;
-   height: 250px;
+   height: 100px;
 }
-.info{
-    height: 300px;
-}
-.c-i {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-.accordion-wrapper {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-    width: 600px;
-    margin:0 auto;
-}
-.accordion {
-    width: 100%;
-    color: white;
-    overflow: hidden;
-    margin-bottom: 16px;
-}
-.accordion:last-child{
-    margin-bottom: 0;
-}
-.accordion-label {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 16px;
-    background: rgba(4,57,94,.8);
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 20px;
-}
-.accordion-label:hover {
-    background: rgba(4,57,94,1);
-}
-.accordion-label::after {
-    content: "\276F";
-    width: 16px;
-    height: 16px;
-    text-align: center;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-.accordion-content {
-    max-height: 0;
-    padding: 0 16px;
-    color: rgba(4,57,94,1);
-    background: white;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-.accordion-content p{
-    margin: 0;
-    color: rgba(4,57,94,.7);
-    font-size: 18px;
-}
-.c-i:checked + .accordion-label {
-    background: rgba(4,57,94,1);
-}
-.c-i:checked + .accordion-label::after {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-.c-i:checked ~ .accordion-content {
-    max-height: 100vh;
-    padding: 16px;
-}
-  
+

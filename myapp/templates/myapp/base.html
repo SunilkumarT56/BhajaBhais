@@ -31,18 +31,20 @@
      <link rel="stylesheet" href="{% static 'myapp/css/home.css' %}" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+     <link rel="stylesheet" href="{% static 'myapp/css/about.css' %}" />
         <link rel="stylesheet" href="{% static 'myapp/css/part_group.css' %}" />
 
     <style>
       body {
-        background-color: #FCEA90;
-        color: rgb(0, 0, 0);
+        background-color: black;
+        color: white;
       }
+      
     </style>
   </head>
   <body>
     {% include 'myapp/nav.html'%}
-    <br/><br/><br/>
+    <br/><br/><br/><br/>
      {% block content %} 
      {% endblock %}
       <br/>
@@ -63,6 +65,7 @@
     ></script>
 
     <!-- load js files -->
+     <script src="https://cdn.tailwindcss.com"></script>
     <script src="{% static 'myapp/javascript/nav.js' %}"></script>
     <script src="{% static 'myapp/javascript/home.js' %}"></script>
     <script src="{% static 'myapp/javascript/legacy.js' %}"></script>
