@@ -1,25 +1,26 @@
 :root {
-    --primary-color: #2196f3;
-    --primary-glow: rgba(33, 150, 243, 0.8);
-    --secondary-color: #9c27b0;
+    --primary-color: #f44336; /* Bright Red */
+    --primary-glow: rgba(244, 67, 54, 0.8);
+    --secondary-color: #ff1744; /* Deep Red */
     --text-color: #ffffff;
     --bg-color: #0a0a12;
-    --nav-bg: rgba(16, 16, 26, 0.7);
-    --dropdown-bg: rgba(20, 20, 35, 0.8);
-    --hover-color: #3f51b5;
+    --nav-bg: rgba(26, 0, 0, 0.7); /* dark red tone background */
+    --dropdown-bg: rgba(35, 5, 5, 0.8); /* dropdown with reddish tint */
+    --hover-color: #e53935; /* hover red */
     --border-color: rgba(255, 255, 255, 0.08);
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --neon-glow: 0 0 10px rgba(33, 150, 243, 0.5),
-                 0 0 20px rgba(33, 150, 243, 0.3),
-                 0 0 30px rgba(33, 150, 243, 0.1);
+    --neon-glow: 0 0 10px rgba(244, 67, 54, 0.5),
+                 0 0 20px rgba(244, 67, 54, 0.3),
+                 0 0 30px rgba(244, 67, 54, 0.1);
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --gradient-bg: linear-gradient(135deg, var(--bg-color), #151530);
+    --gradient-bg: linear-gradient(135deg, var(--bg-color), #2a0a0a); /* darker red gradient */
     --glass-effect: saturate(180%) blur(10px);
     --border-radius: 12px;
     --text-description: rgba(255, 255, 255, 0.7);
 }
+
 
 
 /* Header and Navbar */
@@ -56,7 +57,11 @@
     position: relative;
     display: inline-block;
     transition: red;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+    transition: color var(--transition-medium);
 }
+
 
 .logo:hover {
     transform: translateY(-2px);
@@ -419,6 +424,7 @@
 }
 
 .feature {
+    background: rgba(255, 255, 255, 0.03);
     background: #283739;
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
